@@ -19,6 +19,7 @@ const ReactNative = {
   ImageStore: createMockComponent('ImageStore'),
   KeyboardAvoidingView: createMockComponent('KeyboardAvoidingView'),
   ListView: require('./components/ListView'),
+  FlatList: require('./components/FlatList'),
   MapView: createMockComponent('MapView'),
   Modal: createMockComponent('Modal'),
   Navigator: require('./components/Navigator'),
