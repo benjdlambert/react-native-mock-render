@@ -1,23 +1,22 @@
-
 import React from 'react';
 
 import TouchableWithoutFeedback from './TouchableWithoutFeedback';
+import MockComponent from './MockComponent';
 
-const TouchableNativeFeedback = React.createClass({
-  propTypes: {
-    ...TouchableWithoutFeedback.propTypes,
-
-    background: React.PropTypes.object,
-    children: React.PropTypes.node
-  },
-  statics: {
-    SelectableBackground() {},
-    SelectableBackgroundBorderless() {},
-    Ripple(color, borderless) {}
-  },
-  render() {
-    return React.createElement('react-native-mock', null, this.props.children);
+class TouchableNativeFeedback extends MockComponent {
+  static SelectableBackground() {
   }
-});
 
-module.exports = TouchableNativeFeedback;
+  static SelectableBackgroundBorderless() {
+  }
+
+  static Ripple(color, borderless) {
+  }
+}
+TouchableNativeFeedback.propTypes = {
+  ...TouchableWithoutFeedback.propTypes,
+
+  background: React.PropTypes.object
+};
+
+export default TouchableNativeFeedback;

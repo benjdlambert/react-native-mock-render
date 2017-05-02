@@ -6,7 +6,7 @@ class ListViewDataSource {
   }
 
   getRowCount() {
-
+    return this._dataBlob.length;
   }
 
   cloneWithRows(data) {
@@ -24,4 +24,4 @@ class ListViewDataSource {
   }
 }
 
-module.exports = ListViewDataSource;
+export default ListViewDataSource;

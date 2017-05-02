@@ -1,16 +1,13 @@
 import React from 'react';
 import createMockComponent from './createMockComponent';
+import MockComponent from './MockComponent';
 
-const TabBarIOS = React.createClass({
-  propTypes: {
-    children: React.PropTypes.node
-  },
-  statics: {
-    Item: createMockComponent('TabBarIOS.Item')
-  },
-  render() {
-    return React.createElement('react-native-mock', null, this.props.children);
-  }
-});
+class TabBarIOS extends MockComponent {
+}
 
-module.exports = TabBarIOS;
+TabBarIOS.propTypes = {
+  children: React.PropTypes.node
+};
+TabBarIOS.Item = createMockComponent('TabBarIOS.Item');
+
+export default TabBarIOS;
