@@ -9,6 +9,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
+    "linebreak-style": "off",
     "no-unused-vars": [2, {"vars": "all", "args": "none"}],
     "comma-dangle": 0,
     "func-names": 0,

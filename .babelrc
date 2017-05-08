@@ -1,3 +1,28 @@
 {
-  "presets": ["airbnb", "react-native"],
+  "presets": [
+    "airbnb",
+    "react-native"
+  ],
+  "plugins": [
+    [
+      "import-redirect",
+      {
+        "redirect": {
+          "React": "react"
+        }
+      }
+    ]
+  ],
+  "only": [
+    "src/api/",
+    "src/components/",
+    "src/Libraries/",
+    "src/mixins/",
+    "src/NativeModules/",
+    "src/plugins/",
+    "src/propTypes/",
+    "src/RealReactNative/Libraries/StyleSheet/",
+    "src/react-native.js",
+    "src/requireLibrary.js"
+  ]
 }
