@@ -7,6 +7,9 @@ import TouchableWithoutFeedback from './TouchableWithoutFeedback';
 import MockComponent from './MockComponent';
 
 class TouchableOpacity extends MockComponent {
+  render() {
+    return React.createElement('react-native-mock', {onClick: this.props.onPress}, null);
+  }
 }
 TouchableOpacity.propTypes = {
   ...TouchableWithoutFeedback.propTypes,
