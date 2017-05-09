@@ -19,7 +19,6 @@ class MockComponent extends Component {
   }
   render() {
     return React.createElement('react-native-mock', this.props, this.props.children);
-    // return <div {...this.props}>{this.props.children ? this.props.children : ''}</div>;
   }
 }
 
