@@ -1,7 +1,7 @@
 {
-  "name": "react-native-mock-render",
+  "name": "react-native-mock-render-fork",
   "version": "0.0.6",
-  "description": "A fork of react-native-mock that renders components",
+  "description": "A fork of react-native-mock-render",
   "main": "build/react-native.js",
   "scripts": {
     "prepublish": "npm run build",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Root-App/react-native-mock-render.git"
+    "url": "git+https://github.com/TiraO/react-native-mock-render.git"
   },
   "keywords": [
     "react",
@@ -24,7 +24,7 @@
   "author": "Root Insurance Co. Dev Team <devs@joinroot.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Root-App/react-native-mock-render/issues"
+    "url": "https://github.com/Tirao/react-native-mock-render/issues"
   },
   "homepage": "https://github.com/Root-App/react-native-mock-render",
   "devDependencies": {

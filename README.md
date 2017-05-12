@@ -1,15 +1,11 @@
 # react-native-mock-render
 
-A fork of [react-native-mock](https://github.com/RealOrangeOne/react-native-mock) that renders components
-
-## Requirements
-- Node.js 4+
-- The latest version of react-native
+A fork of [react-native-mock-render](https://github.com/Root-App/react-native-mock-render)
 
 ## Installation
 
 ```bash
-npm i react-native-mock-render --save-dev
+npm install react-native-mock-render-fork --save-dev
 ```
 
 ```js
@@ -22,11 +18,3 @@ require('react-native-mock-render/mock'); // <-- side-effects!!!
 ## Why?
 
 We wanted to be able deeply render React Native components in our integration tests and already used `react-native-mock`.
-
-### Contributors
-
-- [Root Insurance's Dev Team](https://joinroot.com)
-
-### [react-native-mock](https://github.com/RealOrangeOne/react-native-mock) Core Contributors
-- [Jake Howard](https://github.com/RealOrangeOne)
-- [Leland Richardson](https://github.com/lelandrichardson) (Original Creator)
