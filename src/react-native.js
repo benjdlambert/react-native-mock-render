@@ -10,7 +10,7 @@ const ReactNative = {
   // Components
   ActivityIndicator: require('./components/ActivityIndicator').default,
   ActivityIndicatorIOS: require('./components/ActivityIndicatorIOS').default,
-  ART: require('./components/ART').default,
+  ART: require('./components/ART'),
   Button: createMockComponent('Button'),
   DatePickerIOS: createMockComponent('DatePickerIOS'),
   DrawerLayoutAndroid: require('./components/DrawerLayoutAndroid').default,

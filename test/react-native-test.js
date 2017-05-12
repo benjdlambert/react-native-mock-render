@@ -1,5 +1,7 @@
-import { expect } from 'chai';
-import { get } from 'lodash';
+import chai from 'chai';
+import {get} from 'lodash';
+
+const {expect} = chai;
 
 describe('react-native.js', () => {
   it('returns renderable types when expected', () => {
@@ -62,8 +64,14 @@ describe('react-native.js', () => {
       'WebView',
     ];
 
+    chai.use(function (_chai, _) {
+      _chai.Assertion.addMethod('withMessage', function (msg) {
+        _.flag(this, 'message', msg);
+      });
+    });
+
     renderableComponents.forEach((component) => {
-      expect(get(MockReactNative, component)).to.be.a('function');
+      expect(get(MockReactNative, component)).withMessage(component).to.be.a('function');
     });
   });
 });

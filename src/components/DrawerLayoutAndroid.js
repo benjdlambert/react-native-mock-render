@@ -98,5 +98,5 @@ DrawerLayoutAndroid.propTypes = {
    */
   statusBarBackgroundColor: ColorPropType,
 };
-DrawerLayoutAndroid.postitions = DrawerConsts.DrawerPosition;
+DrawerLayoutAndroid.positions = DrawerConsts.DrawerPosition;
 export default DrawerLayoutAndroid;
