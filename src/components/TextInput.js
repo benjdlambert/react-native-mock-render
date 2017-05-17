@@ -6,21 +6,46 @@ import View from './View';
 import Text from './Text';
 import MockComponent from './MockComponent';
 
-const { PropTypes } = React;
+const {PropTypes} = React;
 
 class TextInput extends MockComponent {
+  constructor() {
+    super();
+    this.state = { value: ''};
+  }
+
   // mixins: [NativeMethodsMixin, TimerMixin],
   isFocused() {
     // TODO(lmr): React.findNodeHandle
     return TextInputState.currentlyFocusedField() ===
       React.findNodeHandle(this.refs.input);
   }
+
   clear() {
 
   }
+
+  render() {
+    const props = Object.assign({}, {
+      onSubmit: (event) => {
+        if (this.props.onSubmitEditing) {
+          this.props.onSubmitEditing({nativeEvent: {text: event.target.value}});
+        }
+      },
+      onChange: (event) => {
+        this.setState({value: event.target.value});
+        if (this.props.onChangeText) {
+          this.props.onChangeText(event.target.value);
+        }
+      },
+      value: this.state.value
+    });
+
+    return React.createElement('input', props);
+  }
 }
 TextInput.propTypes = {
-...View.propTypes,
+  ...View.propTypes,
   /**
    * Can tell TextInput to automatically capitalize certain characters.
    *
@@ -30,11 +55,11 @@ TextInput.propTypes = {
    * - none: don't auto capitalize anything
    */
   autoCapitalize: PropTypes.oneOf([
-  'none',
-  'sentences',
-  'words',
-  'characters',
-]),
+    'none',
+    'sentences',
+    'words',
+    'characters',
+  ]),
   /**
    * If false, disables auto-correct. The default value is true.
    */
@@ -57,47 +82,47 @@ TextInput.propTypes = {
    * - email-address
    */
   keyboardType: PropTypes.oneOf([
-  // Cross-platform
-  'default',
-  'email-address',
-  'numeric',
-  'phone-pad',
-  // iOS-only
-  'ascii-capable',
-  'numbers-and-punctuation',
-  'url',
-  'number-pad',
-  'name-phone-pad',
-  'decimal-pad',
-  'twitter',
-  'web-search',
-]),
+    // Cross-platform
+    'default',
+    'email-address',
+    'numeric',
+    'phone-pad',
+    // iOS-only
+    'ascii-capable',
+    'numbers-and-punctuation',
+    'url',
+    'number-pad',
+    'name-phone-pad',
+    'decimal-pad',
+    'twitter',
+    'web-search',
+  ]),
   /**
    * Determines the color of the keyboard.
    * @platform ios
    */
   keyboardAppearance: PropTypes.oneOf([
-  'default',
-  'light',
-  'dark',
-]),
+    'default',
+    'light',
+    'dark',
+  ]),
   /**
    * Determines how the return key should look.
    * @platform ios
    */
   returnKeyType: PropTypes.oneOf([
-  'default',
-  'go',
-  'google',
-  'join',
-  'next',
-  'route',
-  'search',
-  'send',
-  'yahoo',
-  'done',
-  'emergency-call',
-]),
+    'default',
+    'go',
+    'google',
+    'join',
+    'next',
+    'route',
+    'search',
+    'send',
+    'yahoo',
+    'done',
+    'emergency-call',
+  ]),
   /**
    * Limits the maximum number of characters that can be entered. Use this
    * instead of implementing the logic in JS to avoid flicker.
@@ -202,11 +227,11 @@ TextInput.propTypes = {
    * @platform ios
    */
   clearButtonMode: PropTypes.oneOf([
-  'never',
-  'while-editing',
-  'unless-editing',
-  'always',
-]),
+    'never',
+    'while-editing',
+    'unless-editing',
+    'always',
+  ]),
   /**
    * If true, clears the text field automatically when editing begins
    * @platform ios
