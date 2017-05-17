@@ -6,8 +6,11 @@ import React from 'react';
 function requireNativeComponent(viewName, componentInterface, extraConfig) {
   return React.createClass({
     displayName: viewName,
+    propTypes: {
+      children: React.PropTypes.node
+    },
     render() {
-      return null;
+      return React.createElement('react-native-mock', this.props, this.props.children);
     },
   });
 }
