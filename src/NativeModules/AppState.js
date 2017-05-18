@@ -2,7 +2,7 @@ import DeviceEventEmitter from '../plugins/DeviceEventEmitter';
 
 let _appState = 'active';
 
-DeviceEventEmitter.on('appStateDidChange', data => {
+DeviceEventEmitter.addListener('appStateDidChange', data => {
   _appState = data._appState;
 });
 

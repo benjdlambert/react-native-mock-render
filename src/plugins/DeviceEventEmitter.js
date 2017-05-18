@@ -1,4 +1,4 @@
-const EventEmitter = require('events').EventEmitter;
+const EventEmitter = require('../Libraries/EventEmitter/EventEmitter');
 
 const DeviceEventEmitter = new EventEmitter();
 
