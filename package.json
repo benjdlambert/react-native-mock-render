@@ -1,6 +1,6 @@
 {
   "name": "react-native-mock-render-fork",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A fork of react-native-mock-render",
   "main": "build/react-native.js",
   "scripts": {
