@@ -38,6 +38,11 @@ class TextInput extends MockComponent {
           this.props.onChangeText(event.target.value);
         }
       },
+      onBlur: (event) => {
+        if (this.props.onBlur) {
+          this.props.onBlur();
+        }
+      },
       value: this.state.value
     });
 

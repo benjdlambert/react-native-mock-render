@@ -8,7 +8,7 @@ import MockComponent from './MockComponent';
 
 class TouchableOpacity extends MockComponent {
   render() {
-    return React.createElement('react-native-mock', {onClick: this.props.onPress}, null);
+    return React.createElement('react-native-mock', {onClick: this.props.onPress}, this.props.children);
   }
 }
 TouchableOpacity.propTypes = {
