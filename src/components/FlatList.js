@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ScrollResponder from '../mixins/ScrollResponder';
 import TimerMixin from 'react-timer-mixin';
 import ScrollView from './ScrollView';
 
-const { PropTypes } = React;
 const SCROLLVIEW_REF = 'flatlistscroll';
 
 

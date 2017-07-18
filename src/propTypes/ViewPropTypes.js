@@ -1,10 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styleSheetPropType from './StyleSheetPropType';
 import ViewStylePropTypes from './ViewStylePropTypes';
 import { AccessibilityComponentTypes, AccessibilityTraits } from '../components/View/ViewAccessibility';
-
-const { PropTypes } = React;
 
 const stylePropType = styleSheetPropType(ViewStylePropTypes);
 

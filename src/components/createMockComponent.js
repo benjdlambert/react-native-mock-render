@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function createMockComponent(displayName) {
   return React.createClass({
     displayName,
     propTypes: {
-      children: React.PropTypes.node
+      children: PropTypes.node
     },
     render() {
       return React.createElement('react-native-mock', this.props, this.props.children);

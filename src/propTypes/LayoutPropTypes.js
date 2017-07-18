@@ -1,9 +1,9 @@
 /**
  * https://github.com/facebook/react-native/blob/master/Libraries/StyleSheet/LayoutPropTypes.js
  */
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const { PropTypes } = React;
 const ReactPropTypes = PropTypes;
 /**
  * React Native's layout system is based on Flexbox and is powered both

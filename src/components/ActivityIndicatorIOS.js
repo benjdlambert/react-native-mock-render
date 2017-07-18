@@ -1,12 +1,11 @@
 /**
  * https://github.com/facebook/react-native/blob/master/Libraries/Components/ActivityIndicator/ActivityIndicatorIOS.ios.js
  */
+import PropTypes from 'prop-types';
 import React from 'react';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import View from './View';
 import MockComponent from './MockComponent';
-
-const { PropTypes } = React;
 
 class ActivityIndicatorIOS extends MockComponent {
 }

@@ -2,12 +2,12 @@
  *https://github.com/facebook/react-native/blob/master/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js
  */
 import React from 'react';
+import ReactPropTypes from 'prop-types';
 import View from './View';
 import UIManager from '../NativeModules/UIManager';
 import ColorPropType from '../propTypes/ColorPropType';
 import MockComponent from './MockComponent';
 
-const ReactPropTypes = React.PropTypes;
 const DrawerConsts = UIManager.AndroidDrawerLayout.Constants;
 
 class DrawerLayoutAndroid extends MockComponent {

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import PointPropType from '../propTypes/PointPropType';
@@ -7,8 +8,6 @@ import ViewStylePropTypes from '../propTypes/ViewStylePropTypes';
 import ScrollViewManager from '../NativeModules/ScrollViewManager';
 import styleSheetPropType from '../propTypes/StyleSheetPropType';
 import MockComponent from './MockComponent';
-
-const { PropTypes } = React;
 
 const SCROLLVIEW = 'ScrollView';
 const INNERVIEW = 'InnerScrollView';

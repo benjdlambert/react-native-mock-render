@@ -1,5 +1,5 @@
-import React from 'react';
-import { Component } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 class MockComponent extends Component {
   setNativeProps(nativeProps) {
@@ -23,7 +23,7 @@ class MockComponent extends Component {
 }
 
 MockComponent.propTypes = {
-  children: React.PropTypes.node
+  children: PropTypes.node
 };
 
 export default MockComponent;

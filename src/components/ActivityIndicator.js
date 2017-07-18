@@ -1,12 +1,10 @@
 /**
  * https://github.com/facebook/react-native/blob/master/Libraries/Components/ActivityIndicator/ActivityIndicator.js
  */
-import React from 'react';
+import PropTypes from 'prop-types';
 import View from './View';
 import ColorPropType from '../propTypes/ColorPropType';
 import MockComponent from './MockComponent';
-
-const { PropTypes } = React;
 
 class ActivityIndicator extends MockComponent {
 }

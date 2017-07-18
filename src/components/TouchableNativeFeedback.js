@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TouchableWithoutFeedback from './TouchableWithoutFeedback';
@@ -16,7 +17,7 @@ class TouchableNativeFeedback extends MockComponent {
 TouchableNativeFeedback.propTypes = {
   ...TouchableWithoutFeedback.propTypes,
 
-  background: React.PropTypes.object
+  background: PropTypes.object
 };
 
 export default TouchableNativeFeedback;

@@ -2,6 +2,7 @@
  * https://github.com/facebook/react-native/blob/master/Libraries/Components/StatusBar/StatusBar.js
  */
 import React from 'react';
+import ReactPropTypes from 'prop-types';
 import ColorPropType from '../propTypes/ColorPropType';
 import MockComponent from './MockComponent';
 
@@ -15,13 +16,13 @@ let _translucent = false;
 class StatusBar extends MockComponent {
 }
 StatusBar.propTypes = {
-  animated: React.PropTypes.bool,
-  barStyle: React.PropTypes.oneOf(['default', 'light-content']),
+  animated: ReactPropTypes.bool,
+  barStyle: ReactPropTypes.oneOf(['default', 'light-content']),
   backgroundColor: ColorPropType,
-  hidden: React.PropTypes.bool,
-  networkActivityIndicatorVisible: React.PropTypes.bool,
-  showHideTransition: React.PropTypes.oneOf(['fade', 'slide']),
-  translucent: React.PropTypes.bool
+  hidden: ReactPropTypes.bool,
+  networkActivityIndicatorVisible: ReactPropTypes.bool,
+  showHideTransition: ReactPropTypes.oneOf(['fade', 'slide']),
+  translucent: ReactPropTypes.bool
 };
 const statics = {
   setBackgroundColor(backgroundColor, animated) {

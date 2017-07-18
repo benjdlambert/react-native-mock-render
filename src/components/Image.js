@@ -1,6 +1,7 @@
 /**
  * https://github.com/facebook/react-native/blob/master/Libraries/Image/Image.ios.js
  */
+import PropTypes from 'prop-types';
 import React from 'react';
 import styleSheetPropType from '../propTypes/StyleSheetPropType';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
@@ -8,8 +9,6 @@ import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import ImageStylePropTypes from '../propTypes/ImageStylePropTypes';
 import ImageResizeMode from '../propTypes/ImageResizeMode';
 import MockComponent from "./MockComponent";
-
-const {PropTypes} = React;
 
 class Image extends MockComponent {
   static getSize(uri, success, failure) {
