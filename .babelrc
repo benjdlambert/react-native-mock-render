@@ -1,3 +1,19 @@
 {
-  "presets": ["airbnb", "react-native"],
+  "presets": [
+    "airbnb",
+    "react-native"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "react-dom/lib/ReactTestUtils": "react-dom/test-utils"
+        }
+      }
+    ]
+  ]
 }

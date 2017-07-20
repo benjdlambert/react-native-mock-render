@@ -94,11 +94,14 @@ const ReactNative = {
   processColor: require('./plugins/processColor'),
   requireNativeComponent: require('./plugins/requireNativeComponent'),
 
+  ReactInternals: {},
+
   // Prop Types
   ColorPropType: require('./propTypes/ColorPropType'),
   EdgeInsetsPropType: require('./propTypes/EdgeInsetsPropType'),
   PointPropType: require('./propTypes/PointPropType'),
   NavigationExperimental: require('./Libraries/NavigationExperimental'),
+  ViewPropTypes: require('./propTypes/ViewPropTypes')
 };
 
 

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 import React from 'react';
 import ScrollResponder from '../mixins/ScrollResponder';
 import TimerMixin from 'react-timer-mixin';
@@ -7,7 +8,7 @@ import ScrollView from './ScrollView';
 const SCROLLVIEW_REF = 'flatlistscroll';
 
 
-const FlatList = React.createClass({
+const FlatList = createReactClass({
   propTypes: {
     ...ScrollView.propTypes,
 
@@ -79,12 +80,12 @@ const FlatList = React.createClass({
      * A function that returns the scrollable component in which the list rows
      * are rendered. Defaults to returning a ScrollView with the given props.
      */
-    renderScrollComponent: React.PropTypes.func.isRequired,
+    renderScrollComponent: PropTypes.func.isRequired,
     /**
      * How early to start rendering rows before they come on screen, in
      * pixels.
      */
-    scrollRenderAheadDistance: React.PropTypes.number,
+    scrollRenderAheadDistance: PropTypes.number,
     /**
      * (visibleRows, changedRows) => void
      *
@@ -94,13 +95,13 @@ const FlatList = React.createClass({
      * that have changed their visibility, with true indicating visible, and
      * false indicating the view has moved out of view.
      */
-    onChangeVisibleRows: React.PropTypes.func,
+    onChangeVisibleRows: PropTypes.func,
     /**
      * A performance optimization for improving scroll perf of
      * large lists, used in conjunction with overflow: 'hidden' on the row
      * containers.  This is enabled by default.
      */
-    removeClippedSubviews: React.PropTypes.bool,
+    removeClippedSubviews: PropTypes.bool,
     /**
      * An array of child indices determining which children get docked to the
      * top of the screen when scrolling. For example, passing
