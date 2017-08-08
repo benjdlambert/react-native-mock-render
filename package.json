@@ -52,7 +52,7 @@
     "raf": "^3.2.0",
     "react-addons-perf": "^15.4.0",
     "react-addons-test-utils": "^15.4.0",
-    "react-dom": "^15.4.0",
+    "react-dom": "16.0.0-alpha.6",
     "react-timer-mixin": "^0.13.3",
     "warning": "^2.1.0"
   },
