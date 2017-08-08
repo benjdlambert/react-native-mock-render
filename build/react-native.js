@@ -107,7 +107,7 @@ NavigationExperimental:require('./Libraries/NavigationExperimental')};
 var ReactNativeAddons={
 // LinkedStateMixin: require('react-addons-linked-state-mixin') deprecated,
 TestModule:require('./NativeModules/TestModule'),
-TestUtils:require('react-addons-test-utils')};
+TestUtils:require('react-dom/test-utils')};
 
 
 
